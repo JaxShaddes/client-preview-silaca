@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tintas Silaca - Inovação e qualidade em pinturas industriais e decorativas desde 1981. Fabricante português de tintas, revestimentos, vernizes e adesivos.">
+    <meta name="keywords" content="tintas, pinturas industriais, revestimentos, vernizes, adesivos, Portugal, Silaca">
+    <meta name="author" content="Tintas Silaca - A. Clemente, Lda">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tintas Silaca - Inovação e Qualidade desde 1981">
+    <meta property="og:description" content="Fabricante português de tintas, revestimentos, vernizes e adesivos para construção, automóvel, indústria metalomecânica e muito mais.">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tintas Silaca - A. Clemente, Lda",
+      "url": "https://www.tintassilaca.pt",
+      "logo": "https://www.tintassilaca.pt/logo.png",
+      "foundingDate": "1981",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua das Fragas, 390",
+        "postalCode": "4505-602",
+        "addressLocality": "Sanguêdo, Santa Maria da Feira",
+        "addressCountry": "PT"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+351-256-123-456",
+        "contactType": "customer service",
+        "availableLanguage": ["Portuguese", "English"]
+      }
+    }
+    </script>
+    
+    <title>Tintas Silaca - Inovação e Qualidade em Pinturas Industriais</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #1e3a8a;
+            --deep-teal: #0f766e;
+            --accent-orange: #334155;
+            --light-gray: #f1f5f9;
+            --dark-gray: #334155;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-gray);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Navigation */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-orange);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .nav-link.active {
+            color: var(--accent-orange);
+        }
+        
+        /* Page transitions */
+        .page-section {
+            display: none;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        .page-section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Hero section */
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%);
+        }
+        
+        /* Cards */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Buttons */
+        .btn-primary {
+            background-color: var(--accent-orange);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-orange);
+        }
+        
+        .btn-primary:hover {
+            background-color: #c2410c;
+            border-color: #c2410c;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(234, 88, 12, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-blue);
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 2px solid var(--primary-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+        
+        /* Form */
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+        
+        .form-input.error {
+            border-color: #dc2626;
+        }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        /* Product filter */
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 24px;
+            border: 2px solid #e2e8f0;
+            background-color: white;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            color: white;
+        }
+        
+        /* Color selector */
+        .color-swatch {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .color-swatch:hover,
+        .color-swatch.selected {
+            border-color: var(--primary-blue);
+            transform: scale(1.1);
+        }
+        
+        /* Lazy loading */
+        img[loading="lazy"] {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        img[loading="lazy"].loaded {
+            opacity: 1;
+        }
+        
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 32px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background-color: var(--accent-orange);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--accent-orange);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 16px;
+            width: 2px;
+            height: calc(100% + 16px);
+            background-color: #e2e8f0;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        /* Success message */
+        .success-message {
+            display: none;
+            background-color: #10b981;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 16px;
+            animation: slideDown 0.3s ease;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Loading spinner */
+        .spinner {
+            border: 3px solid #f3f4f6;
+            border-top: 3px solid var(--primary-blue);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-gradient h1 {
+                font-size: 2rem;
+            }
+            
+            .timeline-item {
+                padding-left: 30px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <!-- Logo -->
+<div class="flex items-center cursor-pointer" onclick="navigateTo('home')">
+    <div class="flex items-center">
+        <!-- Replace with actual logo -->
+        <img src="logo.png" alt="" width="375px" />
+        <div>
+            <!--<h1 class="text-lg md:text-2xl font-bold" style="color: var(--primary-blue);">Tintas Silaca</h1>-->
+            <p class="text-xs text-gray-500 hidden sm:block">A. Clemente, Lda - Desde 1981</p>
+        </div>
+    </div>
+</div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link active text-gray-700 hover:text-#344155-600 font-medium" onclick="navigateTo('home', event)">Início</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-#344155-600 font-medium" onclick="navigateTo('about', event)">Sobre Nós</a>
+                    <a href="#products" class="nav-link text-gray-700 hover:text-#344155-600 font-medium" onclick="navigateTo('products', event)">Produtos</a>
+                    <a href="#sectors" class="nav-link text-gray-700 hover:text-#344155-600 font-medium" onclick="navigateTo('sectors', event)">Setores</a>
+                    <a href="#quality" class="nav-link text-gray-700 hover:text-#344155-600 font-medium" onclick="navigateTo('quality', event)">Qualidade & I&D</a>
+                    <!--<a href="#news" class="nav-link text-gray-700 hover:text-#344155-600 font-medium" onclick="navigateTo('news', event)">Notícias</a>-->
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-#344155-600 font-medium" onclick="navigateTo('contact', event)">Contacto</a>
+                </div>
+                
+                <!-- Language Selector & Mobile Menu Button
+                <div class="flex items-center space-x-4">
+                    <select class="hidden md:block border-2 border-gray-300 rounded-lg px-3 py-2 text-sm font-medium" aria-label="Selecionar idioma">
+                        <option value="pt">PT</option>
+                        <option value="en">EN</option>
+                    </select>
+                    
+                    <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()" aria-label="Menu de navegação">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div> -->
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-50">
+            <div class="p-6">
+                <button onclick="toggleMobileMenu()" class="float-right text-2xl" aria-label="Fechar menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="clear-both mt-8 space-y-4">
+                    <a href="#home" class="block nav-link text-gray-700 font-medium py-2" onclick="navigateTo('home', event); toggleMobileMenu()">Início</a>
+                    <a href="#about" class="block nav-link text-gray-700 font-medium py-2" onclick="navigateTo('about', event); toggleMobileMenu()">Sobre Nós</a>
+                    <a href="#products" class="block nav-link text-gray-700 font-medium py-2" onclick="navigateTo('products', event); toggleMobileMenu()">Produtos</a>
+                    <a href="#sectors" class="block nav-link text-gray-700 font-medium py-2" onclick="navigateTo('sectors', event); toggleMobileMenu()">Setores</a>
+                    <a href="#quality" class="block nav-link text-gray-700 font-medium py-2" onclick="navigateTo('quality', event); toggleMobileMenu()">Qualidade & I&D</a>
+                    <!--<a href="#news" class="block nav-link text-gray-700 font-medium py-2" onclick="navigateTo('news', event); toggleMobileMenu()">Notícias</a>-->
+                    <a href="#contact" class="block nav-link text-gray-700 font-medium py-2" onclick="navigateTo('contact', event); toggleMobileMenu()">Contacto</a>
+                    <select class="w-full border-2 border-gray-300 rounded-lg px-3 py-2 text-sm font-medium mt-4" aria-label="Selecionar idioma">
+                        <option value="pt">PT - Português</option>
+                        <option value="en">EN - English</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="pt-20">
+        
+        <!-- HOME PAGE -->
+        <section id="home-page" class="page-section active">
+            <!-- Hero Section -->
+            <div class="hero-gradient text-white py-20 md:py-32">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="scroll-animate">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                                Inovação e Qualidade em Pinturas Industriais e Decorativas
+                            </h1>
+                            <p class="text-xl md:text-2xl mb-8 text-gray-100">
+                                Desde 1981, a Tintas Silaca é referência em soluções de revestimento para todos os setores da indústria portuguesa.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <button class="btn-primary" onclick="navigateTo('products')">
+                                    Descubra os Nossos Produtos
+                                </button>
+                                <button class="btn-secondary bg-white text-blue-900 border-white hover:bg-gray-100" onclick="navigateTo('contact')">
+                                    Entre em Contacto
+                                </button>
+                            </div>
+                        </div>
+                        <div class="scroll-animate">
+                            <!-- Replace with actual hero image -->
+                            <img src="hero.png" 
+                                 alt="Aplicação de tintas industriais" 
+                                 class="rounded-lg shadow-2xl"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Features -->
+            <div class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid md:grid-cols-4 gap-8 text-center">
+                        <div class="scroll-animate">
+                            <div class="text-5xl mb-4" style="color: var(--accent-orange);">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Laboratório I&D</h3>
+                            <p class="text-gray-600">Investigação e desenvolvimento próprio para inovação contínua</p>
+                        </div>
+                        <div class="scroll-animate">
+                            <div class="text-5xl mb-4" style="color: var(--accent-orange);">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Controlo de Qualidade</h3>
+                            <p class="text-gray-600">Processos rigorosos de certificação e testes</p>
+                        </div>
+                        <div class="scroll-animate">
+                            <div class="text-5xl mb-4" style="color: var(--accent-orange);">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Sustentabilidade</h3>
+                            <p class="text-gray-600">Conformidade ambiental e produtos eco-friendly</p>
+                        </div>
+                        <div class="scroll-animate">
+                            <div class="text-5xl mb-4" style="color: var(--accent-orange);">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">40+ Anos</h3>
+                            <p class="text-gray-600">Experiência comprovada desde 1981</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Highlights -->
+            <div class="py-16" style="background-color: var(--light-gray);">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold mb-4" style="color: var(--primary-blue);">Nossas Soluções</h2>
+                        <p class="text-xl text-gray-600">Produtos de alta performance para cada necessidade</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Tintas para construção" 
+                                 class="w-full h-48 object-cover"
+                                 loading="lazy">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-3" style="color: var(--primary-blue);">Construção Civil</h3>
+                                <p class="text-gray-600 mb-4">Tintas e revestimentos de alta durabilidade para interiores e exteriores.</p>
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="navigateTo('products')">
+                                    Saber Mais <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="https://www.shutterstock.com/image-photo/professional-worker-man-painting-car-600nw-2449719987.jpg" 
+                                 alt="Tintas para automóveis" 
+                                 class="w-full h-48 object-cover"
+                                 loading="lazy">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-3" style="color: var(--primary-blue);">Repintura Automóvel</h3>
+                                <p class="text-gray-600 mb-4">Acabamentos profissionais para o setor automóvel com excelente cobertura.</p>
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="navigateTo('products')">
+                                    Saber Mais <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQrchvMftqChpHBwTPSAe70FZ2rMejglrxpQ&s" 
+                                 alt="Tintas industriais" 
+                                 class="w-full h-48 object-cover"
+                                 loading="lazy">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-3" style="color: var(--primary-blue);">Indústria Metalomecânica</h3>
+                                <p class="text-gray-600 mb-4">Revestimentos industriais resistentes à corrosão e ao desgaste.</p>
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="navigateTo('products')">
+                                    Saber Mais <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4APqF3OGjuPxpeZmTxAQvLlAT7phqtTwATA&s" 
+                                 alt="Tintas industriais" 
+                                 class="w-full h-48 object-cover"
+                                 loading="lazy">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-3" style="color: var(--primary-blue);">Indústria Mobiliário</h3>
+                                <p class="text-gray-600 mb-4">Os melhores produtos de proteção para madeiras.</p>
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="navigateTo('products')">
+                                    Saber Mais <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--primary-blue);">
+                        Pronto para pintar o Seu Futuro?
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                        Entre em contacto connosco para aconselhamento técnico profissional.
+                    </p>
+                    <button class="btn-primary" onclick="navigateTo('contact')">
+                        Contacte-nos Hoje
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ABOUT PAGE -->
+        <section id="about-page" class="page-section">
+            <div class="bg-gradient-to-r from-blue-900 to-teal-700 text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-5xl font-bold mb-4">Sobre Nós</h1>
+                    <p class="text-xl">Conheça a história e os valores da Tintas Silaca</p>
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <!-- Company Overview -->
+                <div class="grid md:grid-cols-2 gap-12 mb-16">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6" style="color: var(--primary-blue);">A Nossa História</h2>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Fundada em <strong>1981</strong>, somos uma empresa portuguêsa de referência no fabríco de tintas, revestimentos, primários, vernizes, adesivos e produtos relacionados.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Com mais de 40 anos de experiência, servimos diversos setores incluindo construção civil, repintura automóvel, indústria metalomecânica ligeira e pesada, mobiliário, cerâmica, naval e aeroespacial.
+                        </p>
+                        <p class="text-lg text-gray-700">
+                            A nossa sede situa-se em <strong>Rua Quinta D'Além, 132, Apartado 39 4416-861 Pedroso, Vila Nova de Gaia</strong>, enquanto que todo o fabríco, armazenamento e expedição se situam em <strong>Rua das Fragas, 390 - 4505-602 Sanguêdo, Santa Maria da Feira</strong> onde dispomos de instalações modernas equipadas com tecnologia de ponta.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSx8_Jw-D6pHyD4KpVQLU1D7cbqXw5A-3sichLTgnzQu4F89Yd_3hwby7b-pflMWT5n_zJQJ7iWS0QbHUI8Mkn59cuBvvXrNux2ST4bOaeArOFQTY8AnN4Km5ioU7RpzSzHetMU8kQ=s1360-w1360-h1020-rw" 
+                             alt="Instalações Tintas Silaca" 
+                             class="rounded-lg shadow-lg w-full"
+                             loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- Mission & Values -->
+                <div class="bg-gray-100 rounded-lg p-8 md:p-12 mb-16">
+                    <h2 class="text-3xl font-bold mb-8 text-center" style="color: var(--primary-blue);">Missão e Valores</h2>
+                    
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--accent-orange);">
+                                <i class="fas fa-bullseye text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Nossa Missão</h3>
+                            <p class="text-gray-700">
+                                Fornecer soluções de revestimento inovadoras e sustentáveis que superam as expectativas dos nossos clientes, contribuindo para a excelência dos seus projetos.
+                            </p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--deep-teal);">
+                                <i class="fas fa-eye text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Nossa Visão</h3>
+                            <p class="text-gray-700">
+                                Ser a referência nacional em tintas e revestimentos industriais, reconhecidos pela qualidade, inovação e compromisso ambiental.
+                            </p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center" style="background-color: var(--primary-blue);">
+                                <i class="fas fa-heart text-3xl text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Nossos Valores</h3>
+                            <p class="text-gray-700">
+                                Qualidade, Inovação, Sustentabilidade, Integridade, Compromisso com o Cliente e Responsabilidade Social.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8 text-center" style="color: var(--primary-blue);">Marcos Históricos</h2>
+                    
+                    <div class="max-w-3xl mx-auto">
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2">1981 – O Início de um Sonho</h3>
+                            <p class="text-gray-700">Com a visão e a vasta experiência do Sr. Alfredo Clemente no setor das tintas e vernizes, nasce a A. Clemente, Lda. A empresa dedica-se à produção e comercialização de tintas e produtos complementares, inicialmente direcionada para a repintura automóvel e construção civil, sob a marca própria SILACA – registada como marca comercial ainda no primeiro ano de atividade. O crescimento foi constante, sustentado pelo dinamismo, dedicação e espírito empreendedor do seu fundador.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2">1987 – Primeira Grande Expansão de Gama</h3>
+                            <p class="text-gray-700">Entrada decidida no segmento das tintas acrílicas para repintura automóvel, alargando significativamente a oferta SILACA.</p>
+                        </div>
+                        
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2">1997 – Entrada no Mundo das Colas Técnicas</h3>
+                            <p class="text-gray-700">Aquisição estratégica da INAMA, uma referência nacional em colas e adesivos, reforçando a capacidade de resposta e diversificando o portefólio da A. Clemente, Lda.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2">1998-2001 – Rumo à Excelência Certificada</h3>
+                            <p class="text-gray-700">Face à crescente exigência do mercado, a empresa abraça o desafio da certificação da qualidade. Em março de 2001, recebe o primeiro Certificado NP EN ISO 9001:1995, garantindo a excelência em conceção, produção, instalação e assistência pós-venda.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2">2002-2004 – A Prova de Fogo (literalmente)</h3>
+                            <p class="text-gray-700">Na noite de 12 de setembro de 2002, um incêndio devastador destrói cerca de dois terços das instalações, incluindo stocks, laboratório e frota automóvel. Com a liderança determinada do Sr. Alfredo Clemente e o compromisso inabalável de toda a equipa, a produção é retomada em tempo recorde – apenas três meses depois já funcionávamos novamente a pleno ritmo. As instalações foram totalmente reconstruídas até março de 2003. Simultaneamente, inicia-se a transição para a norma ISO 9001:2000, a automatização da linha de solventes, renovação do parque de equipamentos e implementação de um novo sistema informático.
+
+                            Em janeiro de 2004, o falecimento inesperado do fundador marca um momento de profunda mudança.
+                            A equipa diretiva reorganiza-se com rapidez e, em setembro de 2004, a APCER atribui a certificação pela nova norma ISO 9001:2000 – prova viva da resiliência e profissionalismo da empresa.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2">2006 – Nova Marca, Novos Horizontes</h3>
+                            <p class="text-gray-700">Aquisição da marca Tintas TOP, criada para conquistar novos mercados nacionais e internacionais com uma proposta de valor diferenciada.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2">2007 – Expansão Nacional</h3>
+                            <p class="text-gray-700">Abertura da delegação e armazém em Évora, reforçando a proximidade logística ao sul do país e melhorando o serviço aos clientes dessa região. Renovação da certificação de qualidade pela APCER.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2">2019 – Rebranding: Tradição com Olhar no Futuro</h3>
+                            <p class="text-gray-700">Mantendo o espírito e o desenho original do logótipo criado pelo Sr. Alfredo Clemente, a marca SILACA adota uma imagem mais moderna e minimalista. É lançada uma plataforma digital totalmente renovada, refletindo a mesma exigência de qualidade e rigor de sempre.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2">2020 – Resiliência em Tempo de Pandemia</h3>
+                            <p class="text-gray-700">Mesmo perante a maior crise sanitária global das últimas décadas, a A. Clemente, Lda. nunca fechou portas. Com o mesmo espírito de luta incutido pelo fundador, mantivemos a produção e o abastecimento, protegendo colaboradores e garantindo o compromisso com os nossos clientes.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold mb-2">Hoje – Uma Empresa Consolidada e Virada para o Futuro</h3>
+                            <p class="text-gray-700">Com mais de 40 anos de história, cerca de 60 colaboradores e uma estrutura organizacional sólida e estável, a A. Clemente, Lda. (marcas SILACA, Inama e Tintas TOP) está firmemente implantada no mercado nacional e internacional (Europa e África). 
+
+                            Somos reconhecidos como uma empresa inovadora e atual no setor das tintas, vernizes e colas técnicas, graças a:
+                            <ul>
+                                <li>Um laboratório moderno de controlo e análise de produto</li>
+                                <li>Um departamento de Investigação & Desenvolvimento dinâmico e orientado às necessidades do cliente</li>
+                                <li>Uma cultura de rigor, qualidade e proximidade herdada do nosso fundador</li>
+                            </ul>
+
+                            Porque o legado do Sr. Alfredo Clemente não é apenas uma história do passado, é o motor que continua a impulsionar o nosso futuro.
+
+                        <h3>A. Clemente, Lda. – Desde 1981, pintamos o amanhã.</h3>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Section -->
+                <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+                    <h2 class="text-3xl font-bold mb-8 text-center" style="color: var(--primary-blue);">Nossa Equipa</h2>
+                    <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-12">
+                        A Tintas Silaca orgulha-se de contar com uma equipa de profissionais altamente qualificados, incluindo químicos, engenheiros, técnicos especializados e consultores comerciais dedicados a oferecer as melhores soluções aos nossos clientes.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-4 gap-8 text-center">
+                        <div>
+                            <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-blue-900 flex items-center justify-center">
+                                <i class="fas fa-users text-3xl text-white"></i>
+                            </div>
+                            <h3 class="font-bold text-2xl mb-1" style="color: var(--accent-orange);">50+</h3>
+                            <p class="text-gray-600">Colaboradores</p>
+                        </div>
+                        
+                        <div>
+                            <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-teal-700 flex items-center justify-center">
+                                <i class="fas fa-flask text-3xl text-white"></i>
+                            </div>
+                            <h3 class="font-bold text-2xl mb-1" style="color: var(--accent-orange);">10+</h3>
+                            <p class="text-gray-600">Investigadores I&D</p>
+                        </div>
+                        
+                        <div>
+                            <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-orange-600 flex items-center justify-center">
+                                <i class="fas fa-headset text-3xl text-white"></i>
+                            </div>
+                            <h3 class="font-bold text-2xl mb-1" style="color: var(--accent-orange);">15+</h3>
+                            <p class="text-gray-600">Consultores Técnicos</p>
+                        </div>
+                        
+                        <div>
+                            <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-blue-600 flex items-center justify-center">
+                                <i class="fas fa-industry text-3xl text-white"></i>
+                            </div>
+                            <h3 class="font-bold text-2xl mb-1" style="color: var(--accent-orange);">25+</h3>
+                            <p class="text-gray-600">Técnicos de Produção</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- PRODUCTS PAGE -->
+        <section id="products-page" class="page-section">
+            <div class="bg-gradient-to-r from-blue-900 to-teal-700 text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-5xl font-bold mb-4">Nossos Produtos</h1>
+                    <p class="text-xl">Soluções completas de revestimento para todas as aplicações</p>
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <!-- Search and Filter -->
+                <div class="mb-12">
+                    <div class="flex flex-col md:flex-row gap-4 mb-6">
+                        <div class="flex-1">
+                            <input type="text" 
+                                   id="product-search" 
+                                   placeholder="Pesquisar produtos..." 
+                                   class="form-input"
+                                   oninput="filterProducts()"
+                                   aria-label="Pesquisar produtos">
+                        </div>
+                        <button class="btn-primary" onclick="document.getElementById('color-selector-modal').classList.remove('hidden')">
+                            <i class="fas fa-palette mr-2"></i> Seletor de Cores
+                        </button>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-3">
+                        <button class="filter-btn active" data-filter="all" onclick="filterByCategory('all', this)">
+                            Todos os Produtos
+                        </button>
+                        <button class="filter-btn" data-filter="construction" onclick="filterByCategory('construction', this)">
+                            Construção Civil
+                        </button>
+                        <button class="filter-btn" data-filter="automotive" onclick="filterByCategory('automotive', this)">
+                            Repintura Automóvel
+                        </button>
+                        <button class="filter-btn" data-filter="industrial" onclick="filterByCategory('industrial', this)">
+                            Indústria Metalomecânica
+                        </button>
+                        <button class="filter-btn" data-filter="varnish" onclick="filterByCategory('varnish', this)">
+                            Indústria de Mobiliário
+                        </button>
+                        <button class="filter-btn" data-filter="adhesive" onclick="filterByCategory('adhesive', this)">
+                            Diluentes
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Products Grid -->
+                <div id="products-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Construction Products -->
+                    <div class="product-card card bg-white rounded-lg shadow-lg overflow-hidden" data-category="construction">
+                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80" 
+                             alt="Tinta de Fachadas" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                Construção Civil
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">Tinta de Fachadas Premium</h3>
+                            <p class="text-gray-600 mb-4">
+                                Revestimento acrílico de alta durabilidade para exteriores. Resistente a intempéries, UV e humidade.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="showProductDetails('Tinta de Fachadas Premium')">
+                                    Detalhes <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                                <a href="#" class="text-blue-600 hover:underline" download>
+                                    <i class="fas fa-download mr-1"></i> Ficha Técnica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card card bg-white rounded-lg shadow-lg overflow-hidden" data-category="construction">
+                        <img src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?auto=format&fit=crop&w=600&q=80" 
+                             alt="Tinta Interior" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                Construção Civil
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">Tinta Interior Lavável</h3>
+                            <p class="text-gray-600 mb-4">
+                                Tinta plástica lavável para interiores. Acabamento mate ou acetinado, fácil aplicação.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="showProductDetails('Tinta Interior Lavável')">
+                                    Detalhes <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                                <a href="#" class="text-blue-600 hover:underline" download>
+                                    <i class="fas fa-download mr-1"></i> Ficha Técnica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card card bg-white rounded-lg shadow-lg overflow-hidden" data-category="construction">
+                        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=600&q=80" 
+                             alt="Primário Universal" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                Construção Civil
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">Primário Universal</h3>
+                            <p class="text-gray-600 mb-4">
+                                Primário fixador e regulador de absorção para preparação de superfícies antes da pintura.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="showProductDetails('Primário Universal')">
+                                    Detalhes <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                                <a href="#" class="text-blue-600 hover:underline" download>
+                                    <i class="fas fa-download mr-1"></i> Ficha Técnica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Automotive Products -->
+                    <div class="product-card card bg-white rounded-lg shadow-lg overflow-hidden" data-category="automotive">
+                        <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80" 
+                             alt="Base Acrílica Automóvel" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                Automóvel
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">Base Acrílica 2K</h3>
+                            <p class="text-gray-600 mb-4">
+                                Sistema bicomponente para repintura automóvel. Excelente cobertura e brilho profundo.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="showProductDetails('Base Acrílica 2K')">
+                                    Detalhes <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                                <a href="#" class="text-blue-600 hover:underline" download>
+                                    <i class="fas fa-download mr-1"></i> Ficha Técnica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card card bg-white rounded-lg shadow-lg overflow-hidden" data-category="automotive">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" 
+                             alt="Verniz Automóvel" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                Automóvel
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">Verniz HS Brilho</h3>
+                            <p class="text-gray-600 mb-4">
+                                Verniz de alto sólidos com excelente resistência química e proteção UV.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="showProductDetails('Verniz HS Brilho')">
+                                    Detalhes <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                                <a href="#" class="text-blue-600 hover:underline" download>
+                                    <i class="fas fa-download mr-1"></i> Ficha Técnica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card card bg-white rounded-lg shadow-lg overflow-hidden" data-category="automotive">
+                        <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=600&q=80" 
+                             alt="Primário Epóxi" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                Automóvel
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">Primário Epóxi Anticorrosivo</h3>
+                            <p class="text-gray-600 mb-4">
+                                Proteção anticorrosiva de alta performance para superfícies metálicas.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="showProductDetails('Primário Epóxi')">
+                                    Detalhes <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                                <a href="#" class="text-blue-600 hover:underline" download>
+                                    <i class="fas fa-download mr-1"></i> Ficha Técnica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Industrial Products -->
+                    <div class="product-card card bg-white rounded-lg shadow-lg overflow-hidden" data-category="industrial">
+                        <img src="https://images.unsplash.com/photo-1581092918484-8313ce1b1b0e?auto=format&fit=crop&w=600&q=80" 
+                             alt="Esmalte Industrial" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-teal-100 text-teal-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                Industrial
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">Esmalte Sintético Industrial</h3>
+                            <p class="text-gray-600 mb-4">
+                                Revestimento de alta resistência mecânica para ambientes industriais agressivos.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="showProductDetails('Esmalte Industrial')">
+                                    Detalhes <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                                <a href="#" class="text-blue-600 hover:underline" download>
+                                    <i class="fas fa-download mr-1"></i> Ficha Técnica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card card bg-white rounded-lg shadow-lg overflow-hidden" data-category="industrial">
+                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80" 
+                             alt="Tinta em Pó" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-teal-100 text-teal-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                Indústria Metalomecânica
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">Tinta em Pó Poliéster</h3>
+                            <p class="text-gray-600 mb-4">
+                                Sistema de pintura eletrostática para aplicação em metal, alumínio e aço.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="showProductDetails('Tinta em Pó')">
+                                    Detalhes <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                                <a href="#" class="text-blue-600 hover:underline" download>
+                                    <i class="fas fa-download mr-1"></i> Ficha Técnica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Varnish Products -->
+                    <div class="product-card card bg-white rounded-lg shadow-lg overflow-hidden" data-category="varnish">
+                        <img src="https://images.unsplash.com/photo-1615875474908-f403116f5257?auto=format&fit=crop&w=600&q=80" 
+                             alt="Verniz para Madeira" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                Vernizes
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">Verniz para Madeira PU</h3>
+                            <p class="text-gray-600 mb-4">
+                                Verniz poliuretano para madeiras nobres. Excelente resistência a riscos e manchas.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="showProductDetails('Verniz Madeira')">
+                                    Detalhes <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                                <a href="#" class="text-blue-600 hover:underline" download>
+                                    <i class="fas fa-download mr-1"></i> Ficha Técnica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Adhesive Products -->
+                    <div class="product-card card bg-white rounded-lg shadow-lg overflow-hidden" data-category="adhesive">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" 
+                             alt="Adesivo para Cerâmica" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                Adesivos
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">Adesivo Cimentício C2</h3>
+                            <p class="text-gray-600 mb-4">
+                                Cola para cerâmica e porcelanato de alta aderência. Uso interno e externo.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <button class="text-#344155-600 font-semibold hover:underline" onclick="showProductDetails('Adesivo Cerâmica')">
+                                    Detalhes <i class="fas fa-arrow-right ml-1"></i>
+                                </button>
+                                <a href="#" class="text-blue-600 hover:underline" download>
+                                    <i class="fas fa-download mr-1"></i> Ficha Técnica
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Color Selector Modal -->
+            <div id="color-selector-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+                <div class="bg-white rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                    <div class="p-6 border-b flex justify-between items-center">
+                        <h2 class="text-2xl font-bold" style="color: var(--primary-blue);">Seletor de Cores</h2>
+                        <button onclick="document.getElementById('color-selector-modal').classList.add('hidden')" class="text-2xl" aria-label="Fechar seletor de cores">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-6">Selecione uma cor base para visualizar a amostra:</p>
+                        
+                        <div class="grid grid-cols-5 gap-4 mb-8">
+                            <div class="color-swatch" style="background-color: #FFFFFF; border: 2px solid #e5e7eb;" onclick="selectColor('#FFFFFF', 'Branco Puro')" title="Branco Puro"></div>
+                            <div class="color-swatch" style="background-color: #F5F5DC;" onclick="selectColor('#F5F5DC', 'Bege')" title="Bege"></div>
+                            <div class="color-swatch" style="background-color: #FFE4B5;" onclick="selectColor('#FFE4B5', 'Pêssego')" title="Pêssego"></div>
+                            <div class="color-swatch" style="background-color: #D3D3D3;" onclick="selectColor('#D3D3D3', 'Cinza Claro')" title="Cinza Claro"></div>
+                            <div class="color-swatch" style="background-color: #696969;" onclick="selectColor('#696969', 'Cinza Escuro')" title="Cinza Escuro"></div>
+                            
+                            <div class="color-swatch" style="background-color: #8B4513;" onclick="selectColor('#8B4513', 'Castanho')" title="Castanho"></div>
+                            <div class="color-swatch" style="background-color: #FF0000;" onclick="selectColor('#FF0000', 'Vermelho')" title="Vermelho"></div>
+                            <div class="color-swatch" style="background-color: #FF6347;" onclick="selectColor('#FF6347', 'Coral')" title="Coral"></div>
+                            <div class="color-swatch" style="background-color: #FFA500;" onclick="selectColor('#FFA500', 'Laranja')" title="Laranja"></div>
+                            <div class="color-swatch" style="background-color: #FFD700;" onclick="selectColor('#FFD700', 'Dourado')" title="Dourado"></div>
+                            
+                            <div class="color-swatch" style="background-color: #FFFF00;" onclick="selectColor('#FFFF00', 'Amarelo')" title="Amarelo"></div>
+                            <div class="color-swatch" style="background-color: #9ACD32;" onclick="selectColor('#9ACD32', 'Verde Amarelado')" title="Verde Amarelado"></div>
+                            <div class="color-swatch" style="background-color: #008000;" onclick="selectColor('#008000', 'Verde')" title="Verde"></div>
+                            <div class="color-swatch" style="background-color: #00CED1;" onclick="selectColor('#00CED1', 'Turquesa')" title="Turquesa"></div>
+                            <div class="color-swatch" style="background-color: #0000FF;" onclick="selectColor('#0000FF', 'Azul')" title="Azul"></div>
+                            
+                            <div class="color-swatch" style="background-color: #000080;" onclick="selectColor('#000080', 'Azul Marinho')" title="Azul Marinho"></div>
+                            <div class="color-swatch" style="background-color: #4B0082;" onclick="selectColor('#4B0082', 'Índigo')" title="Índigo"></div>
+                            <div class="color-swatch" style="background-color: #8A2BE2;" onclick="selectColor('#8A2BE2', 'Violeta')" title="Violeta"></div>
+                            <div class="color-swatch" style="background-color: #FF1493;" onclick="selectColor('#FF1493', 'Rosa Pink')" title="Rosa Pink"></div>
+                            <div class="color-swatch" style="background-color: #000000;" onclick="selectColor('#000000', 'Preto')" title="Preto"></div>
+                        </div>
+                        
+                        <div id="color-preview" class="bg-gray-100 rounded-lg p-8 text-center">
+                            <p class="text-gray-500 mb-4">Selecione uma cor para ver a amostra</p>
+                            <div id="color-swatch-preview" class="w-full h-32 rounded-lg border-4 border-gray-300 mb-4"></div>
+                            <p id="color-name" class="text-xl font-bold"></p>
+                            <p id="color-code" class="text-gray-600"></p>
+                        </div>
+                        
+                        <div class="mt-6 text-center">
+                            <button class="btn-primary" onclick="requestColorSample()">
+                                Solicitar Amostra Física
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECTORS PAGE -->
+        <section id="sectors-page" class="page-section">
+            <div class="bg-gradient-to-r from-blue-900 to-teal-700 text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-5xl font-bold mb-4">Setores Servidos</h1>
+                    <p class="text-xl">Soluções especializadas para cada segmento da indústria</p>
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <!-- Construction Sector -->
+                <div class="grid md:grid-cols-2 gap-12 mb-16 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" 
+                             alt="Setor Construção" 
+                             class="rounded-lg shadow-lg w-full"
+                             loading="lazy">
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-building text-4xl mr-4" style="color: var(--accent-orange);"></i>
+                            <h2 class="text-3xl font-bold" style="color: var(--primary-blue);">Construção Civil</h2>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Fornecemos uma gama completa de tintas e revestimentos para o setor da construção civil, incluindo:
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Tintas para fachadas com alta resistência a intempéries</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Tintas interiores laváveis e respiráveis</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Primários e fixadores para preparação de superfícies</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Impermeabilizantes e proteções especiais</span>
+                            </li>
+                        </ul>
+                        <button class="btn-secondary" onclick="navigateTo('products')">
+                            Ver Produtos para Construção
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Automotive Sector -->
+                <div class="grid md:grid-cols-2 gap-12 mb-16 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-car text-4xl mr-4" style="color: var(--accent-orange);"></i>
+                            <h2 class="text-3xl font-bold" style="color: var(--primary-blue);">Repintura Automóvel</h2>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Sistemas completos para repintura automóvel profissional, desenvolvidos para oficinas e pintores especializados:
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Bases acrílicas bicomponentes de alta cobertura</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Vernizes de brilho direto resistentes a UV</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Primários anticorrosivos e aparelhos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Massas e produtos de preparação</span>
+                            </li>
+                        </ul>
+                        <button class="btn-secondary" onclick="navigateTo('products')">
+                            Ver Produtos Automóvel
+                        </button>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://www.shutterstock.com/image-photo/professional-worker-man-painting-car-600nw-2449719987.jpg" 
+                             alt="Setor Automóvel" 
+                             class="rounded-lg shadow-lg w-full"
+                             loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- Metalworking Sector -->
+                <div class="grid md:grid-cols-2 gap-12 mb-16 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80" 
+                             alt="Setor Metalomecânica" 
+                             class="rounded-lg shadow-lg w-full"
+                             loading="lazy">
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-industry text-4xl mr-4" style="color: var(--accent-orange);"></i>
+                            <h2 class="text-3xl font-bold" style="color: var(--primary-blue);">Indústria Metalomecânica</h2>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Revestimentos industriais de alta performance para ambientes exigentes:
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Esmaltes sintéticos de secagem rápida</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Tintas em pó para aplicação eletrostática</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Revestimentos epóxi resistentes a químicos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Proteções anticorrosivas para ambientes agressivos</span>
+                            </li>
+                        </ul>
+                        <button class="btn-secondary" onclick="navigateTo('products')">
+                            Ver Produtos Industriais
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Furniture Sector -->
+                <div class="grid md:grid-cols-2 gap-12 mb-16 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-couch text-4xl mr-4" style="color: var(--accent-orange);"></i>
+                            <h2 class="text-3xl font-bold" style="color: var(--primary-blue);">Mobiliário</h2>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Vernizes e acabamentos especializados para a indústria do mobiliário:
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Vernizes poliuretano para madeiras nobres</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Lacas de alta resistência a riscos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Velaturas e efeitos decorativos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Seladores e fundos para preparação</span>
+                            </li>
+                        </ul>
+                        <button class="btn-secondary" onclick="navigateTo('products')">
+                            Ver Produtos para Mobiliário
+                        </button>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" 
+                             alt="Setor Mobiliário" 
+                             class="rounded-lg shadow-lg w-full"
+                             loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- Ceramics Sector -->
+                <div class="grid md:grid-cols-2 gap-12 mb-16 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1604709177225-055f99402ea3?auto=format&fit=crop&w=800&q=80" 
+                             alt="Setor Cerâmica" 
+                             class="rounded-lg shadow-lg w-full"
+                             loading="lazy">
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-border-all text-4xl mr-4" style="color: var(--accent-orange);"></i>
+                            <h2 class="text-3xl font-bold" style="color: var(--primary-blue);">Cerâmica</h2>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Adesivos e produtos complementares para aplicação de cerâmica e revestimentos:
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Colas cimentícias de alta aderência</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Argamassas para juntas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Impermeabilizantes para zonas húmidas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Produtos de preparação e nivelamento</span>
+                            </li>
+                        </ul>
+                        <button class="btn-secondary" onclick="navigateTo('products')">
+                            Ver Produtos para Cerâmica
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Naval & Aerospace -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-ship text-4xl mr-4" style="color: var(--accent-orange);"></i>
+                            <h2 class="text-3xl font-bold" style="color: var(--primary-blue);">Naval & Aeroespacial</h2>
+                        </div>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Soluções de revestimento de alto desempenho para aplicações especializadas:
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Tintas marinhas anticorrosivas e antivegetativas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Revestimentos aeronáuticos certificados</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Proteções contra ambiente salino</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-3"></i>
+                                <span>Acabamentos de alta durabilidade</span>
+                            </li>
+                        </ul>
+                        <button class="btn-secondary" onclick="navigateTo('products')">
+                            Ver Produtos Especializados
+                        </button>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80" 
+                             alt="Setor Naval" 
+                             class="rounded-lg shadow-lg w-full"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- QUALITY & R&D PAGE -->
+        <section id="quality-page" class="page-section">
+            <div class="bg-gradient-to-r from-blue-900 to-teal-700 text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-5xl font-bold mb-4">Qualidade & Investigação</h1>
+                    <p class="text-xl">Compromisso com a excelência e inovação contínua</p>
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <!-- R&D Lab -->
+                <div class="grid md:grid-cols-2 gap-12 mb-16 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6" style="color: var(--primary-blue);">Laboratório de I&D</h2>
+                        <p class="text-lg text-gray-700 mb-4">
+                            O nosso laboratório próprio de Investigação e Desenvolvimento está equipado com tecnologia de ponta para criar soluções inovadoras e testar novos produtos.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-6">
+                            A equipa de químicos e engenheiros trabalha constantemente no desenvolvimento de novas formulações, utilizando matérias-primas de última geração para garantir produtos de máxima qualidade e performance.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: var(--accent-orange);">
+                                    <i class="fas fa-microscope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Análise Química Avançada</h3>
+                                    <p class="text-gray-600">Equipamento de última geração para caracterização de materiais</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: var(--deep-teal);">
+                                    <i class="fas fa-vial text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Formulação Personalizada</h3>
+                                    <p class="text-gray-600">Desenvolvimento de produtos sob medida para necessidades específicas</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: var(--primary-blue);">
+                                    <i class="fas fa-chart-line text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Testes de Performance</h3>
+                                    <p class="text-gray-600">Ensaios rigorosos de durabilidade, resistência e qualidade</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80" 
+                             alt="Laboratório I&D" 
+                             class="rounded-lg shadow-lg w-full"
+                             loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- Quality Control -->
+                <div class="bg-gray-100 rounded-lg p-8 md:p-12 mb-16">
+                    <h2 class="text-4xl font-bold mb-8 text-center" style="color: var(--primary-blue);">Controlo de Qualidade</h2>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mb-8">
+                        <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                            <i class="fas fa-clipboard-check text-5xl mb-4" style="color: var(--accent-orange);"></i>
+                            <h3 class="text-xl font-bold mb-3">Inspeção de Matérias-Primas</h3>
+                            <p class="text-gray-700">Todas as matérias-primas são rigorosamente testadas antes da produção</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                            <i class="fas fa-cogs text-5xl mb-4" style="color: var(--accent-orange);"></i>
+                            <h3 class="text-xl font-bold mb-3">Controlo de Processo</h3>
+                            <p class="text-gray-700">Monitorização constante durante todas as fases de produção</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                            <i class="fas fa-check-double text-5xl mb-4" style="color: var(--accent-orange);"></i>
+                            <h3 class="text-xl font-bold mb-3">Validação Final</h3>
+                            <p class="text-gray-700">Testes de produto final para garantir conformidade total</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-center text-lg text-gray-700">
+                        Cada lote de produto é submetido a testes de viscosidade, densidade, cor, tempo de secagem, aderência, resistência química e outros parâmetros críticos.
+                    </p>
+                </div>
+                
+                <!-- Environmental Compliance -->
+                <div class="grid md:grid-cols-2 gap-12 mb-16 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-4xl font-bold mb-6" style="color: var(--primary-blue);">Conformidade Ambiental</h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            A Tintas Silaca está comprometida com a sustentabilidade e a proteção do meio ambiente. Todos os nossos processos de produção seguem as mais rigorosas normas ambientais.
+                        </p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-leaf text-2xl mr-4" style="color: var(--deep-teal);"></i>
+                                <span class="text-lg">Redução de COV (Compostos Orgânicos Voláteis)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-recycle text-2xl mr-4" style="color: var(--deep-teal);"></i>
+                                <span class="text-lg">Reciclagem e gestão responsável de resíduos</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-water text-2xl mr-4" style="color: var(--deep-teal);"></i>
+                                <span class="text-lg">Tratamento adequado de efluentes</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-certificate text-2xl mr-4" style="color: var(--deep-teal);"></i>
+                                <span class="text-lg">Certificações ISO e conformidade com REACH</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                            <p class="text-green-800 font-semibold">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Desenvolvemos formulações eco-friendly com baixo impacto ambiental sem comprometer a qualidade.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" 
+                             alt="Sustentabilidade" 
+                             class="rounded-lg shadow-lg w-full"
+                             loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- Innovation -->
+                <div class="bg-gradient-to-r from-blue-900 to-teal-700 text-white rounded-lg p-8 md:p-12">
+                    <h2 class="text-4xl font-bold mb-6 text-center">Inovação em Matérias-Primas</h2>
+                    <p class="text-xl text-center mb-12 max-w-3xl mx-auto">
+                        Investimos continuamente em investigação de novas matérias-primas e tecnologias para oferecer produtos cada vez mais eficientes e sustentáveis.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="text-5xl mb-4">💡</div>
+                            <h3 class="text-lg font-bold mb-2">Resinas Avançadas</h3>
+                            <p class="text-gray-200">Polímeros de última geração</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-5xl mb-4">🎨</div>
+                            <h3 class="text-lg font-bold mb-2">Pigmentos Premium</h3>
+                            <p class="text-gray-200">Cores mais vivas e duráveis</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-5xl mb-4">⚗️</div>
+                            <h3 class="text-lg font-bold mb-2">Aditivos Funcionais</h3>
+                            <p class="text-gray-200">Performance otimizada</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-5xl mb-4">🌱</div>
+                            <h3 class="text-lg font-bold mb-2">Bio-Materiais</h3>
+                            <p class="text-gray-200">Fontes renováveis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- NEWS/BLOG PAGE -->
+        <section id="news-page" class="page-section">
+            <div class="bg-gradient-to-r from-blue-900 to-teal-700 text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-5xl font-bold mb-4">Notícias & Blog</h1>
+                    <p class="text-xl">Últimas novidades e tendências do setor</p>
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <!-- Featured Article -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-12">
+                    <div class="grid md:grid-cols-2">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" 
+                             alt="Notícia Destaque" 
+                             class="w-full h-full object-cover"
+                             loading="lazy">
+                        <div class="p-8">
+                            <span class="inline-block bg-orange-100 text-#344155-800 text-sm font-semibold px-3 py-1 rounded-full mb-4">
+                                DESTAQUE
+                            </span>
+                            <h2 class="text-3xl font-bold mb-4" style="color: var(--primary-blue);">
+                                Tintas Silaca Lança Nova Linha Eco-Friendly
+                            </h2>
+                            <p class="text-gray-600 mb-4">
+                                <i class="fas fa-calendar mr-2"></i> 15 de Janeiro de 2024
+                            </p>
+                            <p class="text-lg text-gray-700 mb-6">
+                                Estamos orgulhosos de apresentar a nossa nova linha de tintas ecológicas, desenvolvida com matérias-primas sustentáveis e formulação de baixo COV. Esta inovação representa o nosso compromisso contínuo com a sustentabilidade ambiental...
+                            </p>
+                            <button class="btn-primary" onclick="alert('Esta funcionalidade estará disponível em breve. Adicione artigos completos no sistema CMS.')">
+                                Ler Mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog Posts Grid -->
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <!-- Article 1 -->
+                    <article class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581092918484-8313ce1b1b0e?auto=format&fit=crop&w=600&q=80" 
+                             alt="Expansão Industrial" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                EMPRESA
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">
+                                Expansão das Instalações em 2024
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">
+                                <i class="fas fa-calendar mr-2"></i> 10 de Janeiro de 2024
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                A Tintas Silaca anuncia investimento de 2 milhões de euros na ampliação das suas instalações produtivas...
+                            </p>
+                            <button class="text-#344155-600 font-semibold hover:underline">
+                                Ler Mais <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 2 -->
+                    <article class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80" 
+                             alt="Parceria Setor Automóvel" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                PARCERIAS
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">
+                                Nova Parceria com Oficinas Premium
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">
+                                <i class="fas fa-calendar mr-2"></i> 5 de Janeiro de 2024
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                Acordo estratégico com rede de oficinas especializadas em repintura automóvel de luxo...
+                            </p>
+                            <button class="text-#344155-600 font-semibold hover:underline">
+                                Ler Mais <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 3 -->
+                    <article class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" 
+                             alt="Certificação Ambiental" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                SUSTENTABILIDADE
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">
+                                Certificação Ambiental ISO 14001
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">
+                                <i class="fas fa-calendar mr-2"></i> 28 de Dezembro de 2023
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                Tintas Silaca obtém renovação da certificação ISO 14001, reforçando compromisso ambiental...
+                            </p>
+                            <button class="text-#344155-600 font-semibold hover:underline">
+                                Ler Mais <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 4 -->
+                    <article class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" 
+                             alt="Workshop Técnico" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                FORMAÇÃO
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">
+                                Workshops Técnicos para Profissionais
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">
+                                <i class="fas fa-calendar mr-2"></i> 20 de Dezembro de 2023
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                Programa de formação técnica gratuita para pintores e aplicadores profissionais...
+                            </p>
+                            <button class="text-#344155-600 font-semibold hover:underline">
+                                Ler Mais <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 5 -->
+                    <article class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1487611459768-bd414656ea10?auto=format&fit=crop&w=600&q=80" 
+                             alt="Tendências 2024" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-teal-100 text-teal-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                TENDÊNCIAS
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">
+                                Cores e Tendências para 2024
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">
+                                <i class="fas fa-calendar mr-2"></i> 15 de Dezembro de 2023
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                Descubra as cores que vão dominar a decoração e design industrial em 2024...
+                            </p>
+                            <button class="text-#344155-600 font-semibold hover:underline">
+                                Ler Mais <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 6 -->
+                    <article class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" 
+                             alt="Prémio Inovação" 
+                             class="w-full h-48 object-cover"
+                             loading="lazy">
+                        <div class="p-6">
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                                PRÉMIOS
+                            </span>
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--primary-blue);">
+                                Prémio de Inovação Industrial
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">
+                                <i class="fas fa-calendar mr-2"></i> 1 de Dezembro de 2023
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                Tintas Silaca distinguida com prémio de inovação pela nova formulação nanotecnológica...
+                            </p>
+                            <button class="text-#344155-600 font-semibold hover:underline">
+                                Ler Mais <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Newsletter Signup -->
+                <div class="bg-gradient-to-r from-blue-900 to-teal-700 text-white rounded-lg p-8 md:p-12 text-center">
+                    <h2 class="text-3xl font-bold mb-4">Subscreva a Nossa Newsletter</h2>
+                    <p class="text-xl mb-8">Receba as últimas notícias, lançamentos de produtos e dicas técnicas diretamente no seu email.</p>
+                    <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4" onsubmit="subscribeNewsletter(event)">
+                        <input type="email" 
+                               placeholder="O seu email" 
+                               class="form-input flex-1 text-gray-900"
+                               required
+                               aria-label="Email para newsletter">
+                        <button type="submit" class="btn-primary bg-orange-600 hover:bg-orange-700 whitespace-nowrap">
+                            <i class="fas fa-envelope mr-2"></i> Subscrever
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CONTACT PAGE -->
+        <section id="contact-page" class="page-section">
+            <div class="bg-gradient-to-r from-blue-900 to-teal-700 text-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-5xl font-bold mb-4">Contacte-nos</h1>
+                    <p class="text-xl">Estamos aqui para ajudar com as suas necessidades de revestimento</p>
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Information -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6" style="color: var(--primary-blue);">Informações de Contacto</h2>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: var(--accent-orange);">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Morada</h3>
+                                    <p class="text-gray-700">
+                                        Rua das Fragas, 390<br>
+                                        4505-602 Sanguêdo<br>
+                                        Santa Maria da Feira, Portugal
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: var(--deep-teal);">
+                                    <i class="fas fa-phone text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Telefone</h3>
+                                    <p class="text-gray-700">
+                                        <a href="tel:+351256123456" class="hover:text-#344155-600">+351 256 123 456</a><br>
+                                        <span class="text-sm text-gray-500">Seg-Sex: 9h00 - 18h00</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0" style="background-color: var(--primary-blue);">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">Email</h3>
+                                    <p class="text-gray-700">
+                                        <a href="mailto:geral@tintassilaca.pt" class="hover:text-#344155-600">geral@silaca.pt</a><br>
+                                        <a href="mailto:comercial@tintassilaca.pt" class="hover:text-#344155-600">comercial@silaca.pt</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Download Brochure -->
+                        <div class="bg-gray-100 rounded-lg p-6 mb-8">
+                            <h3 class="font-bold text-xl mb-3" style="color: var(--primary-blue);">Descarregar Catálogo</h3>
+                            <p class="text-gray-700 mb-4">Consulte o nosso catálogo completo de produtos em formato PDF.</p>
+                            <a href="#" download class="btn-secondary inline-block">
+                                <i class="fas fa-download mr-2"></i> Catálogo de Produtos (PDF)
+                            </a>
+                        </div>
+                        
+                        <!-- Map -->
+                        <div class="rounded-lg overflow-hidden shadow-lg">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.8647392996797!2d-8.5419!3d40.9167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU1JzAwLjEiTiA4wrAzMiczMC44Ilc!5e0!3m2!1spt-PT!2spt!4v1234567890123!5m2!1spt-PT!2spt" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"
+                                title="Localização Tintas Silaca"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6" style="color: var(--primary-blue);">Envie-nos uma Mensagem</h2>
+                        
+                        <form id="contact-form" onsubmit="submitContactForm(event)" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold mb-2 text-gray-700">Nome Completo *</label>
+                                <input type="text" 
+                                       id="name" 
+                                       name="name" 
+                                       class="form-input" 
+                                       required
+                                       aria-required="true">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-semibold mb-2 text-gray-700">Email *</label>
+                                <input type="email" 
+                                       id="email" 
+                                       name="email" 
+                                       class="form-input" 
+                                       required
+                                       aria-required="true">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold mb-2 text-gray-700">Telefone</label>
+                                <input type="tel" 
+                                       id="phone" 
+                                       name="phone" 
+                                       class="form-input">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-semibold mb-2 text-gray-700">Assunto *</label>
+                                <select id="subject" 
+                                        name="subject" 
+                                        class="form-input" 
+                                        required
+                                        aria-required="true">
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="informacao">Pedido de Informação</option>
+                                    <option value="orcamento">Pedido de Orçamento</option>
+                                    <option value="tecnico">Apoio Técnico</option>
+                                    <option value="parceria">Proposta de Parceria</option>
+                                    <option value="reclamacao">Reclamação</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-semibold mb-2 text-gray-700">Mensagem *</label>
+                                <textarea id="message" 
+                                          name="message" 
+                                          rows="6" 
+                                          class="form-input" 
+                                          required
+                                          aria-required="true"></textarea>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <input type="checkbox" 
+                                       id="privacy" 
+                                       name="privacy" 
+                                       class="mt-1 mr-3" 
+                                       required
+                                       aria-required="true">
+                                <label for="privacy" class="text-sm text-gray-700">
+                                    Aceito a <a href="#" class="text-blue-600 hover:underline">política de privacidade</a> e autorizo o tratamento dos meus dados pessoais. *
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary w-full">
+                                <i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem
+                            </button>
+                            
+                            <div id="form-success" class="success-message">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                Mensagem enviada com sucesso! Entraremos em contacto em breve.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tintas Silaca</h3>
+                    <p class="text-gray-400 mb-4">
+                        A. Clemente, Lda<br>
+                        Fabricante de tintas e revestimentos desde 1981
+                    </p>
+                    <div class="flex space-x-4">
+                        <!--<a href="#" class="text-gray-400 hover:text-white transition" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition" aria-label="YouTube">
+                            <i class="fab fa-youtube text-xl"></i>-->
+                            <a href="#" class="text-gray-400 hover:text-white transition" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" onclick="navigateTo('about', event)" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="#products" onclick="navigateTo('products', event)" class="text-gray-400 hover:text-white transition">Produtos</a></li>
+                        <li><a href="#sectors" onclick="navigateTo('sectors', event)" class="text-gray-400 hover:text-white transition">Setores</a></li>
+                        <li><a href="#quality" onclick="navigateTo('quality', event)" class="text-gray-400 hover:text-white transition">Qualidade & I&D</a></li>
+                        <!--<li><a href="#news" onclick="navigateTo('news', event)" class="text-gray-400 hover:text-white transition">Notícias</a></li>-->
+                    </ul>
+                </div>
+                
+                <!-- Products -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Produtos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Construção Civil</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Repintura Automóvel</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Indústria Metalomecânica</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Indústria Mobiliário</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Diluentes</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Rua das Fragas, 390<br>
+                            <span class="ml-6">4505-602 Sanguêdo</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>
+                            <a href="tel:+351256123456" class="hover:text-white">+351 223 750 775</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope mr-2"></i>
+                            <a href="mailto:geral@tintassilaca.pt" class="hover:text-white">geral@silaca.pt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 Tintas Silaca - A. Clemente, Lda. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidade</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Termos de Uso</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Google Analytics Placeholder -->
+    <script>
+        // TODO: Replace with your actual Google Analytics tracking ID
+        // Example:
+        // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        // ga('create', 'UA-XXXXXXXXX-X', 'auto');
+        // ga('send', 'pageview');
+    </script>
+    
+    <script>
+        // Navigation System
+        function navigateTo(page, event) {
+            if (event) {
+                event.preventDefault();
+            }
+            
+            // Hide all page sections
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected page
+            const targetPage = document.getElementById(page + '-page');
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Update nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + page) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Update URL without reload
+            if (history.pushState) {
+                history.pushState(null, null, '#' + page);
+            }
+        }
+        
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        // Product Filtering
+        function filterByCategory(category, button) {
+            const productCards = document.querySelectorAll('.product-card');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Filter products
+            productCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        function filterProducts() {
+            const searchTerm = document.getElementById('product-search').value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        function showProductDetails(productName) {
+            alert('Detalhes do produto: ' + productName + '\n\nEsta funcionalidade mostrará informações completas do produto, incluindo especificações técnicas, aplicações, rendimento, tempo de secagem, etc.\n\nImplemente um modal ou página dedicada para cada produto.');
+        }
+        
+        // Color Selector
+        function selectColor(colorCode, colorName) {
+            const preview = document.getElementById('color-swatch-preview');
+            const nameElement = document.getElementById('color-name');
+            const codeElement = document.getElementById('color-code');
+            
+            preview.style.backgroundColor = colorCode;
+            nameElement.textContent = colorName;
+            codeElement.textContent = 'Código: ' + colorCode;
+            
+            // Update selected state
+            const swatches = document.querySelectorAll('.color-swatch');
+            swatches.forEach(swatch => swatch.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+        
+        function requestColorSample() {
+            const colorName = document.getElementById('color-name').textContent;
+            if (colorName) {
+                alert('Pedido de amostra registado!\n\nCor: ' + colorName + '\n\nEntraremos em contacto em breve para confirmar o envio da amostra física.');
+                document.getElementById('color-selector-modal').classList.add('hidden');
+            } else {
+                alert('Por favor, selecione uma cor primeiro.');
+            }
+        }
+        
+        // Contact Form
+        function submitContactForm(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Basic validation
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            if (!name || !email || !message) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return false;
+            }
+            
+            // Simulate form submission
+            // TODO: Replace with actual form submission to backend
+            console.log('Form submitted:', Object.fromEntries(formData));
+            
+            // Show success message
+            const successMessage = document.getElementById('form-success');
+            successMessage.classList.add('show');
+            
+            // Reset form
+            form.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+            
+            return false;
+        }
+        
+        // Newsletter Subscription
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            // TODO: Integrate with email marketing service
+            alert('Obrigado por subscrever!\n\nEmail: ' + email + '\n\nReceberá as nossas novidades em breve.');
+            event.target.reset();
+        }
+        
+        // Scroll Animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.scroll-animate').forEach(el => {
+                observer.observe(el);
+            });
+        }
+        
+        // Lazy Loading Images
+        function initLazyLoading() {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.classList.add('loaded');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+                
+                images.forEach(img => imageObserver.observe(img));
+            } else {
+                // Fallback for browsers without IntersectionObserver
+                images.forEach(img => img.classList.add('loaded'));
+            }
+        }
+        
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function(event) {
+            const hash = window.location.hash.substring(1) || 'home';
+            navigateTo(hash);
+        });
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initScrollAnimations();
+            initLazyLoading();
+            
+            // Check for hash in URL
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                navigateTo(hash);
+            }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const menuButton = event.target.closest('button[onclick*="toggleMobileMenu"]');
+            
+            if (mobileMenu.classList.contains('active') && !mobileMenu.contains(event.target) && !menuButton) {
+                toggleMobileMenu();
+            }
+        });
+    </script>
+    
+    <!-- CMS MAINTENANCE INSTRUCTIONS
+    
+    ============================================
+    HOW TO MAINTAIN THIS WEBSITE
+    ============================================
+    
+    1. ADDING NEW PRODUCTS:
+       - Find the "Products Grid" section in the PRODUCTS PAGE
+       - Copy an existing product card (<div class="product-card card...">...</div>)
+       - Update the following:
+         * Image src (replace Unsplash URL with your product image)
+         * Category badge (construction, automotive, industrial, varnish, adhesive)
+         * Product title (h3)
+         * Product description (p)
+         * data-category attribute for filtering
+       - Save the file
+    
+    2. ADDING BLOG POSTS/NEWS:
+       - Find the "Blog Posts Grid" section in the NEWS/BLOG PAGE
+       - Copy an existing article (<article class="card...">...</article>)
+       - Update:
+         * Image src
+         * Category badge
+         * Article title
+         * Date
+         * Article summary
+       - For full articles, create a modal or separate content section
+    
+    3. UPDATING CONTACT INFORMATION:
+       - Find "Contact Information" sections (in Contact page and Footer)
+       - Update phone numbers, email addresses, or physical address
+       - Remember to update in BOTH locations for consistency
+    
+    4. UPDATING COMPANY INFO:
+       - About page: Update history, mission, values
+       - Timeline: Add new milestones in chronological order
+       - Team statistics: Update numbers in the team section
+    
+    5. CHANGING COLORS:
+       - Find the :root CSS variables at the top of the <style> section
+       - Modify:
+         * --primary-blue
+         * --deep-teal
+         * --accent-orange
+         * --light-gray
+         * --dark-gray
+    
+    6. ADDING NEW SECTORS:
+       - Find the SECTORS PAGE
+       - Copy one of the sector sections
+       - Update image, icon, title, description, and bullet points
+       - Maintain the alternating left/right layout (order-1/order-2 classes)
+    
+    7. UPDATING META TAGS FOR SEO:
+       - Find <meta> tags in the <head> section
+       - Update description, keywords for better SEO
+       - Update Schema.org JSON-LD data
+    
+    8. INTEGRATING GOOGLE ANALYTICS:
+       - Find the Google Analytics placeholder script before </body>
+       - Replace UA-XXXXXXXXX-X with your actual tracking ID
+       - Uncomment the code
+    
+    9. CONNECTING CONTACT FORM:
+       - Find submitContactForm() function
+       - Replace console.log with actual AJAX call to your backend
+       - Example backend endpoints: PHP, Node.js, or third-party services like Formspree
+    
+    10. ADDING DOWNLOADABLE PDFs:
+        - Upload PDF files to your server
+        - Update href="#" in download links to actual file paths
+        - Example: href="/downloads/catalogo-2024.pdf"
+    
+    11. REPLACING PLACEHOLDER IMAGES:
+        - Current images use Unsplash URLs
+        - Replace with your own images hosted on your server
+        - Recommended sizes:
+          * Hero images: 1200x800px
+          * Product images: 600x400px
+          * Blog thumbnails: 600x400px
+        - Use optimized WebP format for better performance
+    
+    12. LANGUAGE SWITCHING (Future):
+        - Create duplicate content sections with lang="en" attributes
+        - Implement JavaScript to show/hide based on selected language
+        - Store language preference in localStorage
+    
+    ============================================
+    BEST PRACTICES:
+    ============================================
+    - Always backup before making changes
+    - Test on mobile devices after updates
+    - Optimize images before uploading (use TinyPNG or similar)
+    - Keep alt text descriptive for accessibility
+    - Maintain consistent naming conventions
+    - Update the sitemap after adding new content
+    - Test contact form regularly
+    - Monitor page load speed with Google PageSpeed Insights
+    
+    -->
+    
+</body>
+</html>
